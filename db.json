@@ -1,0 +1,140 @@
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "email": "luis@email.com",
+            "password": "123456",
+            "nombre": "Luis Fernando Picazo Ordaz",
+            "cuentas": [
+                {
+                    "numero_cuenta": 1010101,
+                    "saldo": 1
+                },
+                {
+                    "numero_cuenta": 1010102,
+                    "saldo": 17
+                }
+            ],
+            "movimientos": [
+                {
+                    "fecha": "10-08-25",
+                    "movimiento": "retiro",
+                    "monto": 1500
+                },
+                {
+                    "fecha": "02-05-25",
+                    "movimiento": "deposito",
+                    "monto": 1617
+                },
+                {
+                    "fecha": "01-03-25",
+                    "movimiento": "retiro",
+                    "monto": 3000
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "email": "admin@test.com",
+            "password": "admin123",
+            "nombre": "Usuario 2",
+            "cuentas": [
+                {
+                    "numero_cuenta": 2020201,
+                    "saldo": 10000
+                },
+                {
+                    "numero_cuenta": 2020202,
+                    "saldo": 235
+                }
+            ],
+            "movimientos": [
+                {
+                    "fecha": "10-08-25",
+                    "movimiento": "retiro",
+                    "monto": 1500
+                },
+                {
+                    "fecha": "02-05-25",
+                    "movimiento": "deposito",
+                    "monto": 10000
+                },
+                {
+                    "fecha": "01-03-25",
+                    "movimiento": "retiro",
+                    "monto": 2000
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "email": "admin2@test.com",
+            "password": "admin123",
+            "nombre": "Usuario 3",
+            "cuentas": [
+                {
+                    "numero_cuenta": 3030301,
+                    "saldo": 3000
+                },
+                {
+                    "numero_cuenta": 3030302,
+                    "saldo": 1000
+                }
+            ],
+            "movimientos": [
+                {
+                    "fecha": "10-08-25",
+                    "movimiento": "retiro",
+                    "monto": 1500
+                },
+                {
+                    "fecha": "02-05-25",
+                    "movimiento": "deposito",
+                    "monto": 1617
+                },
+                {
+                    "fecha": "01-03-25",
+                    "movimiento": "retiro",
+                    "monto": 3000
+                }
+            ]
+        }
+    ],
+    "ofertas": [
+        {
+            "id": 1,
+            "titulo": "CONSULTA BURO DE CREDITO",
+            "description": "¿Te interesa un préstamo o tarjeta?"
+        },
+        {
+            "id": 2,
+            "titulo": "TE ESCUCHAMOS",
+            "description": "Queremos conocer más de ti. Te tomará menos de 1 minuto."
+        },
+        {
+            "id": 3,
+            "titulo": "¡Alcanza todas tus metas!",
+            "description": "Descubre Plan y empieza hoy a guardar dinero para alcanzar tus objetivos."
+        },
+        {
+            "id": 4,
+            "titulo": "",
+            "description": "Con Pagaré. tu dinero seguro crece. Invierte hoy mismo. Comienza desde $2,000.00"
+        },
+        {
+            "id": 5,
+            "titulo": "¿Conoces tu perfil de inversión?",
+            "description": "No necesitas ser experto, para invertir en fondos BBVA. Comienza hoy desde $50.00"
+        },
+        {
+            "id": 6,
+            "titulo": "Consultar solicitud",
+            "description": "Tienes un certificado hipotecario en trámite? Si generaste uno, dale seguimiento a tu solicitud de crédito."
+        },
+        {
+            "id": 7,
+            "titulo": "CONSULTA BURO DE CREDITO",
+            "description": "Descubre hoy si puedes obtener un préstamo personal y contrátalo"
+        }
+    ]
+}

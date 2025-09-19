@@ -1,0 +1,21 @@
+:root {
+    --color-negro: #000706;
+    --color-verde-oscuro: #00272d;
+    --color-verde-medio: #134647;
+    --color-verde-claro: #0c7e7e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-negro);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
