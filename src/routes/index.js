@@ -32,16 +32,22 @@ router.get('/dashboard', async (req, res) => {
     const userId = req.query.id;
 
     try {
-        const response = await fetch(`http://localhost:3001/usuarios/${userId}`);
-        const usuario = await response.json();
+        const [userRes, ofertasRes] = await Promise.all([
+            fetch(`http://localhost:3001/usuarios/${userId}`),
+            fetch(`http://localhost:3001/ofertas`)
+        ]);
 
-        // Renderizas la vista con los datos del usuario
-        res.render('dashboard', { usuario });
+        const usuario = await userRes.json();
+        const ofertas = await ofertasRes.json();
+
+        res.render('dashboard', { usuario, ofertas });
+
     } catch (error) {
-        console.error('Error al cargar usuario:', error);
-        res.status(500).send('Error al cargar el dashboard');
+        console.error('Error al cargar dashboard:', error);
+        res.status(500).send('Error al cargar datos');
     }
 });
+
 
 
 module.exports = router;

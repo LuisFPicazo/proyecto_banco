@@ -6,7 +6,6 @@ class Tarjeta extends HTMLElement {
 
     connectedCallback() {
         this.render()
-        this.obtenerDatos()
     }
 
     render() {
