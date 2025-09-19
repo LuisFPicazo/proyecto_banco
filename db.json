@@ -104,37 +104,44 @@
         {
             "id": 1,
             "titulo": "CONSULTA BURO DE CREDITO",
-            "description": "¿Te interesa un préstamo o tarjeta?"
+            "description": "¿Te interesa un préstamo o tarjeta?",
+            "detalles": "Asesoría rápida para revisar tu historial crediticio y opciones de crédito."
         },
         {
             "id": 2,
             "titulo": "TE ESCUCHAMOS",
-            "description": "Queremos conocer más de ti. Te tomará menos de 1 minuto."
+            "description": "Queremos conocer más de ti. Te tomará menos de 1 minuto.",
+            "detalles": "Encuesta breve para mejorar productos y atención personalizada."
         },
         {
             "id": 3,
             "titulo": "¡Alcanza todas tus metas!",
-            "description": "Descubre Plan y empieza hoy a guardar dinero para alcanzar tus objetivos."
+            "description": "Descubre Plan y empieza hoy a guardar dinero para alcanzar tus objetivos.",
+            "detalles": "Plan de ahorro con metas y seguimiento mensual."
         },
         {
             "id": 4,
             "titulo": "",
-            "description": "Con Pagaré. tu dinero seguro crece. Invierte hoy mismo. Comienza desde $2,000.00"
+            "description": "Con Pagaré. tu dinero seguro crece. Invierte hoy mismo. Comienza desde $2,000.00",
+            "detalles": "Inversiones seguras a plazo con rendimiento competitivo."
         },
         {
             "id": 5,
             "titulo": "¿Conoces tu perfil de inversión?",
-            "description": "No necesitas ser experto, para invertir en fondos BBVA. Comienza hoy desde $50.00"
+            "description": "No necesitas ser experto, para invertir en fondos BBVA. Comienza hoy desde $50.00",
+            "detalles": "Evaluación de perfil y recomendaciones para empezar a invertir."
         },
         {
             "id": 6,
             "titulo": "Consultar solicitud",
-            "description": "Tienes un certificado hipotecario en trámite? Si generaste uno, dale seguimiento a tu solicitud de crédito."
+            "description": "Tienes un certificado hipotecario en trámite? Si generaste uno, dale seguimiento a tu solicitud de crédito.",
+            "detalles": "Sigue el estado de tu trámite y conoce los pasos siguientes."
         },
         {
             "id": 7,
             "titulo": "CONSULTA BURO DE CREDITO",
-            "description": "Descubre hoy si puedes obtener un préstamo personal y contrátalo"
+            "description": "Descubre hoy si puedes obtener un préstamo personal y contrátalo",
+            "detalles": "Asesoría para créditos personales y guía paso a paso para solicitarlo."
         }
     ]
 }

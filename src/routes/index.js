@@ -33,7 +33,7 @@ router.get('/dashboard', async (req, res) => {
 
     try {
         const [userRes, ofertasRes] = await Promise.all([
-            fetch(`http://localhost:3001/usuarios/${userId}`),
+            fetch(`http://localhost:3001/usuarios/${encodeURIComponent(userId)}`),
             fetch(`http://localhost:3001/ofertas`)
         ]);
 
@@ -52,7 +52,7 @@ router.get('/movimientos/:id', async (req, res) => {
     const userId = req.params.id;
 
     try {
-        const response = await fetch(`http://localhost:3001/usuarios/${userId}`);
+        const response = await fetch(`http://localhost:3001/usuarios/${encodeURIComponent(userId)}`);
         const usuario = await response.json();
 
         if (!usuario) {

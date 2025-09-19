@@ -16,7 +16,6 @@
             --color-verde-claro: #0c7e7e;
         }
 
-
         body {
             background-color: #000706;
         }
@@ -28,26 +27,105 @@
             font-weight: bold;
             margin-bottom: 1rem;
         }
+
+        .app-header {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            padding: 0.5rem 1rem;
+            
+        }
+        .nav-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+        .nav-center {
+            flex: 1;              /* ocupa espacio central */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .icon-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            border: none;
+            padding: 0.35rem;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .icon-btn:hover {
+            background: rgba(255,255,255,0.03);
+        }
+      
     </style>
+
+    <header class="app-header">
+    <nav class="nav-header" role="navigation" aria-label="Header principal">
+        
+        <button id="btn-back" class="icon-btn" aria-label="Regresar">
+        
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M15 6L9 12L15 18" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        </button>
+
+        <div class="nav-center" aria-hidden="true"></div>
+
+        <button id="btn-menu" class="icon-btn" aria-label="Abrir menú">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M3 7H21" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M3 12H21" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M3 17H21" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        </button>
+    </nav>
+    </header>
 
     <div class="dashboard-title">Banco</div>
 
     <% usuario.cuentas.forEach((cuenta, i)=> { %>
-        <tarjeta-banco tipo="Cuenta <%= i+1 %>" saldo="$<%= cuenta.saldo %>.00"
+        <tarjeta-banco 
+            usuario-id="<%= usuario.id %>" tipo="Cuenta <%= i+1 %>" saldo="$<%= cuenta.saldo %>.00"
             numero="•••• <%= cuenta.numero_cuenta.toString().slice(-4) %>" boton1="Ver Movimientos" boton2="Transferir"
             boton3="Pagar" class="tarjeta">
         </tarjeta-banco>
         <% }) %>
 
-            <% (ofertas || []).slice(0, 3).forEach(o=> { if ((o.titulo || '').trim()) { %>
-                <offer-card titulo="<%= o.titulo %>" descripcion="<%= o.description %>" boton="Ver detalle">
-                </offer-card>
-                <% }}); %>
+    <% (ofertas || []).slice(0, 3).forEach(o=> { if ((o.titulo || '').trim()) { %>
+        <offer-card
+            titulo="<%= o.titulo %>"
+            descripcion="<%= o.description %>"
+            detalles="<%= o.detalles.replace(/"/g, '&quot;') %>"
+            boton="Ver detalle">
+        </offer-card>
+
+        <% }}); %>
 
 
+        <script>
+        (function () {
+            const back = document.getElementById('btn-back');
 
-                    <script src="componentes/tarjeta-banco.js"></script>
-                    <script src="componentes/ofertas-banco.js"></script>
+            if (!back) return;
+
+            back.addEventListener('click', function () {
+            try {
+                if (window.history.length > 1) {
+                window.history.back();
+                } 
+            } catch (err) {
+                window.location.href = '/dashboard';
+            }
+            });
+
+        })();
+        </script>
+        <script src="/componentes/tarjeta-banco.js"></script>
+        <script src="/componentes/ofertas-banco.js"></script>
 </body>
 
 </html>

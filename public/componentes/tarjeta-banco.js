@@ -1,21 +1,40 @@
 class Tarjeta extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
-    }
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+  }
 
-    connectedCallback() {
-        this.render()
-    }
+  connectedCallback() {
+    this.render();
 
-    render() {
-        const tipo = this.getAttribute('tipo') || '';
-        const saldo = this.getAttribute('saldo') || '';
-        const numero = this.getAttribute('numero') || '';
-        const boton1 = this.getAttribute('boton1') || '';
-        const boton2 = this.getAttribute('boton2') || '';
-        const boton3 = this.getAttribute('boton3') || '';
-        this.shadowRoot.innerHTML = `
+    // boton que redirige
+    const btnVer = this.shadowRoot.querySelector('#ver-movimientos');
+    if (btnVer) {
+      btnVer.addEventListener('click', () => {
+        const usuarioId = this.getAttribute('usuario-id') || '';
+
+        if (!usuarioId) {
+          console.warn('tarjeta-banco: falta usuario-id');
+          return;
+        }
+
+        let url = `/movimientos/${encodeURIComponent(usuarioId)}`;
+  
+        window.location.href = url;
+      });
+    }
+  }
+
+  render() {
+    const tipo = this.getAttribute('tipo') || '';
+    const saldo = this.getAttribute('saldo') || '';
+    const numero = this.getAttribute('numero') || '';
+    const boton1 = this.getAttribute('boton1') || '';
+    const boton2 = this.getAttribute('boton2') || '';
+    const boton3 = this.getAttribute('boton3') || '';
+    //redireccion
+
+    this.shadowRoot.innerHTML = `
           <style>
             :host {
               display: block;
@@ -76,12 +95,14 @@ class Tarjeta extends HTMLElement {
           <div class="saldo">${saldo}</div>
           <div class="numero-producto">${numero}</div>
           <div class="acciones">
-            <button>${boton1}</button>
+            <button id="ver-movimientos">${boton1}</button>
             <button>${boton2}</button>
             <button>${boton3}</button>
           </div>
         `;
-    }
+
+    //
+  }
 }
 
 customElements.define('tarjeta-banco', Tarjeta);
