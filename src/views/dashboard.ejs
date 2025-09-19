@@ -39,9 +39,15 @@
         </tarjeta-banco>
         <% }) %>
 
+            <% (ofertas || []).slice(0, 3).forEach(o=> { if ((o.titulo || '').trim()) { %>
+                <offer-card titulo="<%= o.titulo %>" descripcion="<%= o.description %>" boton="Ver detalle">
+                </offer-card>
+                <% }}); %>
 
-<script src="componentes/tarjeta-banco.js"></script>
 
+
+                    <script src="componentes/tarjeta-banco.js"></script>
+                    <script src="componentes/ofertas-banco.js"></script>
 </body>
 
 </html>
