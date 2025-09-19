@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <style>
+        :root {
+            --color-negro: #000706;
+            --color-verde-oscuro: #00272d;
+            --color-verde-medio: #134647;
+            --color-verde-claro: #0c7e7e;
+        }
+
+
+        body {
+            background-color: #000706;
+        }
+
+        .dashboard-title {
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+    </style>
+
+    <div class="dashboard-title">Banco</div>
+
+    <% usuario.cuentas.forEach((cuenta, i)=> { %>
+        <tarjeta-banco tipo="Cuenta <%= i+1 %>" saldo="$<%= cuenta.saldo %>.00"
+            numero="•••• <%= cuenta.numero_cuenta.toString().slice(-4) %>" boton1="Ver Movimientos" boton2="Transferir"
+            boton3="Pagar" class="tarjeta">
+        </tarjeta-banco>
+        <% }) %>
+
+
+<script src="componentes/tarjeta-banco.js"></script>
+
+</body>
+
+</html>

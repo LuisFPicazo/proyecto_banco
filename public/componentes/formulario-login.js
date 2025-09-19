@@ -10,20 +10,30 @@ class Formulario extends HTMLElement {
             const password = this.shadowRoot.querySelector('#password').value;
 
             try {
-                const response = await fetch(`http://localhost:3001/usuarios?email=${email}&password=${password}`);
-                const users = await response.json();
+                const res = await fetch('http://localhost:3000/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
 
-                if (users.length > 0) {
-                    this.mostrarMensaje(`¡Bienvenido, ${users[0].nombre}!`, 'green');
-                    localStorage.setItem('usuario', JSON.stringify(users[0]));
-                    window.location.href = 'dashboard';
+                const result = await res.json();
+
+                if (res.ok) {
+                    this.mostrarMensaje(`¡Bienvenido, ${result.nombre}!`, 'green');
+                    localStorage.setItem('usuario', JSON.stringify(result));
+                    
+                    window.location.href = `/dashboard?id=${result.id}`;
+                    
                 } else {
-                    this.mostrarMensaje('Credenciales inválidas', 'red');
+                    this.mostrarMensaje(result.mensaje || 'Credenciales inválidas', 'red');
                 }
             } catch (err) {
                 this.mostrarMensaje('Error de conexión con el servidor', 'orange');
             }
         };
+
     }
 
     connectedCallback() {
