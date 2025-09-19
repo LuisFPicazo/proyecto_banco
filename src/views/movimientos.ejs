@@ -16,7 +16,7 @@
       }
 
       body {
-        background-color: #000706;
+          background-color: #2e2e2e;
       }
 
       .dashboard-title {
@@ -39,7 +39,7 @@
         gap: 0.5rem;
       }
       .nav-center {
-        flex: 1; /* ocupa espacio central */
+        flex: 1;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -117,8 +117,8 @@
 
     <% (usuario.movimientos || []).forEach((movimiento, i)=> { %>
     <movimientos-banco
-      fecha="$<%= movimiento.fecha %>"
-      tipo="$<%= movimiento.movimiento %>"
+      fecha="<%= movimiento.fecha %>"
+      tipo="<%= movimiento.movimiento %>"
       monto="$<%= movimiento.monto %>"
     >
     </movimientos-banco>

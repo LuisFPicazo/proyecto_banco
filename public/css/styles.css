@@ -1,5 +1,5 @@
 :root {
-    --color-negro: #000706;
+    --color-negro: #000000;
     --color-verde-oscuro: #00272d;
     --color-verde-medio: #134647;
     --color-verde-claro: #0c7e7e;
@@ -12,7 +12,7 @@
 }
 
 body {
-    background-color: var(--color-negro);
+    background-color: #2e2e2e;
     font-family: sans-serif;
     display: flex;
     justify-content: center;

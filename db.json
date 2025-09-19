@@ -13,23 +13,56 @@
                 {
                     "numero_cuenta": 1010102,
                     "saldo": "17"
+                },
+                {
+                    "numero_cuenta": 1010103,
+                    "saldo": "35,000"
+                },
+                {
+                    "numero_cuenta": 1010104,
+                    "saldo": "100,000"
                 }
             ],
             "movimientos": [
                 {
                     "fecha": "10-08-25",
-                    "movimiento": "retiro",
+                    "movimiento": "Retiro",
                     "monto": "1,500"
                 },
                 {
-                    "fecha": "02-05-25",
-                    "movimiento": "deposito",
+                    "fecha": "02-08-25",
+                    "movimiento": "Depósito",
                     "monto": "1,617"
                 },
                 {
+                    "fecha": "25-07-25",
+                    "movimiento": "Retiro",
+                    "monto": "30,000"
+                },
+                {
+                    "fecha": "17-07-25",
+                    "movimiento": "Depósito",
+                    "monto": "12,000"
+                },
+                {
+                    "fecha": "01-07-25",
+                    "movimiento": "Transferencia",
+                    "monto": "5,000"
+                },
+                {
+                    "fecha": "30-06-25",
+                    "movimiento": "Nómina",
+                    "monto": "30,040"
+                },
+                {
+                    "fecha": "01-06-25",
+                    "movimiento": "Retiro",
+                    "monto": "4,504"
+                },
+                {
                     "fecha": "01-03-25",
-                    "movimiento": "retiro",
-                    "monto": "3,000"
+                    "movimiento": "Transferencia",
+                    "monto": "1,200"
                 }
             ]
         },
@@ -51,18 +84,43 @@
             "movimientos": [
                 {
                     "fecha": "10-08-25",
-                    "movimiento": "retiro",
+                    "movimiento": "Retiro",
                     "monto": "1,500"
                 },
                 {
-                    "fecha": "02-05-25",
-                    "movimiento": "deposito",
-                    "monto": "10,000"
+                    "fecha": "02-08-25",
+                    "movimiento": "Depósito",
+                    "monto": "1,617"
+                },
+                {
+                    "fecha": "25-07-25",
+                    "movimiento": "Retiro",
+                    "monto": "30,000"
+                },
+                {
+                    "fecha": "17-07-25",
+                    "movimiento": "Depósito",
+                    "monto": "12,000"
+                },
+                {
+                    "fecha": "01-07-25",
+                    "movimiento": "Transferencia",
+                    "monto": "5,000"
+                },
+                {
+                    "fecha": "30-06-25",
+                    "movimiento": "Nómina",
+                    "monto": "30,040"
+                },
+                {
+                    "fecha": "01-06-25",
+                    "movimiento": "Retiro",
+                    "monto": "4,504"
                 },
                 {
                     "fecha": "01-03-25",
-                    "movimiento": "retiro",
-                    "monto": "2,000"
+                    "movimiento": "Transferencia",
+                    "monto": "1,200"
                 }
             ]
         },
@@ -84,18 +142,43 @@
             "movimientos": [
                 {
                     "fecha": "10-08-25",
-                    "movimiento": "retiro",
+                    "movimiento": "Retiro",
                     "monto": "1,500"
                 },
                 {
-                    "fecha": "02-05-25",
-                    "movimiento": "deposito",
+                    "fecha": "02-08-25",
+                    "movimiento": "Depósito",
                     "monto": "1,617"
                 },
                 {
+                    "fecha": "25-07-25",
+                    "movimiento": "Retiro",
+                    "monto": "30,000"
+                },
+                {
+                    "fecha": "17-07-25",
+                    "movimiento": "Depósito",
+                    "monto": "12,000"
+                },
+                {
+                    "fecha": "01-07-25",
+                    "movimiento": "Transferencia",
+                    "monto": "5,000"
+                },
+                {
+                    "fecha": "30-06-25",
+                    "movimiento": "Nómina",
+                    "monto": "30,040"
+                },
+                {
+                    "fecha": "01-06-25",
+                    "movimiento": "Retiro",
+                    "monto": "4,504"
+                },
+                {
                     "fecha": "01-03-25",
-                    "movimiento": "retiro",
-                    "monto": "3,000"
+                    "movimiento": "Transferencia",
+                    "monto": "1,200"
                 }
             ]
         }
