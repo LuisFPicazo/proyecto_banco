@@ -48,6 +48,25 @@ router.get('/dashboard', async (req, res) => {
     }
 });
 
+router.get('/movimientos/:id', async (req, res) => {
+    const userId = req.params.id;
+
+    try {
+        const response = await fetch(`http://localhost:3001/usuarios/${userId}`);
+        const usuario = await response.json();
+
+        if (!usuario) {
+            return res.status(404).send('Usuario no encontrado');
+        }
+
+        res.render('movimientos', { usuario });
+    } catch (error) {
+        console.error('Error al obtener movimientos:', error);
+        res.status(500).send('Error interno del servidor');
+    }
+});
+
+
 
 
 module.exports = router;
